@@ -4,7 +4,4 @@ kind: Kustomization
 resources:
     - post-sync.yaml
     - pre-sync.yaml
-    - namespace.yaml
-    - rack13dell4-bmc-secret.yaml
-    - assisted-deployment-pull-secret.yaml
     - sno-ocp-48-cluster-k.yaml  
