@@ -12,6 +12,6 @@ resources:
   - 01-devanahalli60-sriov-namespace.yaml
   - 02-devanahalli60-sriov-node-policies.yaml
   - 03-devanahalli60-sriov-networks.yaml
-  - 04-devanahalli60-local-storage-{worker_node.value.config_context.server_profile_name}}.yaml"
-  - 05-devanahalli60-storageclass-{worker_node.value.config_context.server_profile_name}}.yaml"
+  - 04-devanahalli60-local-storage-server-profile-cu-dell-r640-00.yaml
+  - 05-devanahalli60-storageclass-server-profile-cu-dell-r640-00.yaml
  
