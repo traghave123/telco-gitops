@@ -20,7 +20,7 @@ spec:
       project: default
       source:
         repoURL: https://github.com/traghave123/telco-gitops.git
-        targetRevision: develop
+        targetRevision: master
         path: '{{path}}'
       destination:
         server: '{{cluster-address}}'
