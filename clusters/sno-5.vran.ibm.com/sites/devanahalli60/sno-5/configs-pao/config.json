@@ -1,6 +1,0 @@
-{
-    "application-name": "devanahalli60-sno-5-pao",
-    "cluster-name": "sno-5.vran.ibm.com",
-    "cluster-address": "https://api.sno-5.vran.ibm.com:6443",
-    "path": "clusters/sno-5.vran.ibm.com/sites/devanahalli60/sno-5/configs-pao"
-}
