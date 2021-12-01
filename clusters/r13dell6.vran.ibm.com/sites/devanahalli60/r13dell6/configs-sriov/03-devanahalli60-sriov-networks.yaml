@@ -1,0 +1,43 @@
+ 
+---
+###############################################################################
+apiVersion: sriovnetwork.openshift.io/v1
+kind: SriovNetwork
+metadata:
+  name: devanahalli60-cu-vfio-sriov-network0
+  namespace: openshift-sriov-network-operator
+spec:
+  resourceName: vran_vfio
+  networkNamespace: xnf-5g-cu-devanahalli60
+  vlan: 2024
+  ipam: |-
+    {}
+  linkState: auto  
+  # spoofChk: "<spoof_check>"
+  # maxTxRate: <max_tx_rate>
+  # minTxRate: <min_rx_rate>
+  # vlanQoS: <vlan_qos>
+  # trust: "<trust_vf>"
+  # capabilities: <capabilities>
+
+---
+###############################################################################
+apiVersion: sriovnetwork.openshift.io/v1
+kind: SriovNetwork
+metadata:
+  name: devanahalli60-cu-netdevice-sriov-network0
+  namespace: openshift-sriov-network-operator
+spec:
+  resourceName: vran_netdevice
+  networkNamespace: xnf-5g-cu-devanahalli60
+  vlan: 2024
+  ipam: |-
+    {}
+  linkState: auto  
+  # spoofChk: "<spoof_check>"
+  # maxTxRate: <max_tx_rate>
+  # minTxRate: <min_rx_rate>
+  # vlanQoS: <vlan_qos>
+  # trust: "<trust_vf>"
+  # capabilities: <capabilities>
+

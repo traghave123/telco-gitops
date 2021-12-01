@@ -1,0 +1,22 @@
+---
+apiVersion: local.storage.openshift.io/v1
+kind: LocalVolume
+metadata:
+  name: devanahalli60-local-storage-server-profile-cu-dell-r640-00
+  namespace: openshift-local-storage
+spec:
+  nodeSelector:
+    nodeSelectorTerms:
+    - matchExpressions:
+        - key: ran.openshift.io/devanahalli60-local-storage-server-profile-cu-dell-r640-00
+          operator: Exists
+  storageClassDevices:
+    - storageClassName: "devanahalli60-local-storage-server-profile-cu-dell-r640-00"
+      volumeMode: Filesystem
+      fsType: xfs 
+      devicePaths: 
+        - /dev/autopart/lv_1
+        - /dev/autopart/lv_2
+        - /dev/autopart/lv_3
+        - /dev/autopart/lv_4
+        - /dev/autopart/lv_5

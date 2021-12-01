@@ -1,0 +1,6 @@
+{
+    "application-name": "devanahalli60-r13dell6-labelling",
+    "cluster-name": "r13dell6.vran.ibm.com",
+    "cluster-address": "https://api.r13dell6.vran.ibm.com:6443",
+    "path": "clusters/r13dell6.vran.ibm.com/sites/devanahalli60/r13dell6/configs-labelling"
+}
