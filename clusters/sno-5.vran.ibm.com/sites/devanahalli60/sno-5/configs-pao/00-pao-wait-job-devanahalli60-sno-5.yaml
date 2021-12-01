@@ -1,0 +1,38 @@
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+  name: pao-wait-job-devanahalli60-sno-5
+  namespace: argocd
+spec:
+  template:
+    spec:
+      containers:
+        - image: registry.redhat.io/openshift4/ose-cli:v4.4
+          command:
+            - /bin/bash
+            - -c
+            - |
+              export HOME=/tmp/mcp
+              echo ""
+              until [ $STATUS -eq 0 ]
+              do
+                  oc rollout status deploy performance-operator -n openshift-operators --timeout 300s
+                  STATUS=$?
+                  echo -n "Waiting for the pao operator to be installed."
+                  sleep $SLEEP
+              done
+              echo "DONE"
+          imagePullPolicy: Always
+          name: paoperaor-wait-job
+          env:
+          - name: SLEEP
+            value: "5"
+      dnsPolicy: ClusterFirst
+      restartPolicy: OnFailure
+      serviceAccount: cli-job-sa
+      serviceAccountName: cli-job-sa
+      terminationGracePeriodSeconds: 30
