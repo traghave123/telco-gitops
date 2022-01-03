@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sno-5.vran.ibm.com-gitops
+  name: site-management
   namespace: openshift-gitops
 spec:
   destination:
@@ -9,12 +9,12 @@ spec:
 #    namespace: test-sno-siteconfig
   project: default
   source:
-    path: clusters/sno-5.vran.ibm.com/ztp/gitops
+    path: mgmt/configs/config-site
     repoURL: https://github.com/traghave123/telco-gitops.git
     targetRevision: master
   syncPolicy:
     automated:
-      prune: true
+      prune: false
       selfHeal: true
     syncOptions:
     - CreateNamespace=true

@@ -33,7 +33,7 @@ spec:
           - name: SLEEP
             value: "5"
           - name: MCP 
-            value: ran-cu-devanahalli60-server-profile-cu-dell-r640-00
+            value: ran-cu-devanahalli60-dell00
       dnsPolicy: ClusterFirst
       restartPolicy: OnFailure
       serviceAccount: cli-job-sa

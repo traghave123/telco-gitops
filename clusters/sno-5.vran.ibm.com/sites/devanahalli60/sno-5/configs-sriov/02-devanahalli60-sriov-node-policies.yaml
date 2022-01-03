@@ -5,13 +5,13 @@
 apiVersion: sriovnetwork.openshift.io/v1
 kind: SriovNetworkNodePolicy
 metadata:
-  name: devanahalli60-sriov-vfio-dell00-server-profile-cu-dell-r640-00
+  name: devanahalli60-sriov-vfio-dell00-dell00
   namespace: openshift-sriov-network-operator
 spec:
   resourceName: "vran_netdevice"
   nodeSelector:
     ran.openshift.io/sriov: ""
-    ran.openshift.io/devanahalli60-sriov-netdevice-server-profile-cu-dell-r640-00: ""
+    ran.openshift.io/devanahalli60-sriov-netdevice-dell00: ""
   deviceType: netdevice
   priority: 10
   #mtu: 1500
@@ -20,7 +20,7 @@ spec:
     vendor: "15b3"
     deviceID: "1015"
     pfNames:
-          - ens2f0#0-7
+          - ens2f1#0-7
     
 ---
 ###############################################################################
@@ -28,13 +28,13 @@ spec:
 apiVersion: sriovnetwork.openshift.io/v1
 kind: SriovNetworkNodePolicy
 metadata:
-  name: devanahalli60-sriov-a-vfio-dell00-server-profile-cu-dell-r640-00
+  name: devanahalli60-sriov-a-vfio-dell00-dell00
   namespace: openshift-sriov-network-operator
 spec:
   resourceName: "vran_vfio"
   nodeSelector:
     ran.openshift.io/sriov: ""
-    ran.openshift.io/devanahalli60-sriov-vfio-server-profile-cu-dell-r640-00: ""
+    ran.openshift.io/devanahalli60-sriov-vfio-dell00: ""
   deviceType: vfio-pci
   priority: 10
   #mtu: 1500
@@ -43,5 +43,5 @@ spec:
     vendor: "15b3"
     deviceID: "1015"
     pfNames:
-          - ens2f0#8-15
+          - ens2f1#8-15
     

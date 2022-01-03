@@ -4,7 +4,7 @@ kind: Kustomization
 
 commonLabels:
   # Each SITE_ID is a different zone
-  topology.kubernetes.io/zone: ran-cu-devanahalli60-server-profile-cu-dell-r640-00
+  topology.kubernetes.io/zone: ran-cu-devanahalli60-dell00
 
 resources:
   # SRIOV Configs
@@ -12,6 +12,6 @@ resources:
   - 01-devanahalli60-sriov-namespace.yaml
   - 02-devanahalli60-sriov-node-policies.yaml
   - 03-devanahalli60-sriov-networks.yaml
-  - 04-devanahalli60-local-storage-server-profile-cu-dell-r640-00.yaml
-  - 05-devanahalli60-storageclass-server-profile-cu-dell-r640-00.yaml
+  - 04-devanahalli60-local-storage-dell00.yaml
+  - 05-devanahalli60-storageclass-dell00.yaml
  

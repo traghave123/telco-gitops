@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: siteconfig-post
+  name: siteconfig-post-sno-5
   namespace: clusters-sub
   generateName: post-sync-
   annotations:
@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: ztp-site-generator
-          image: quay.io/redhat_emp1/ztp-site-generator:latest 
+          image: quay.io/redhat_emp1/ztp-site-generator:v4.9
           command: ["/bin/bash", "post-sync-entrypoint.sh"]
       restartPolicy: Never
   backoffLimit: 0

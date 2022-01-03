@@ -4,7 +4,7 @@ kind: Kustomization
 
 commonLabels:
   # Each SITE_ID is a different zone
-  topology.kubernetes.io/zone: ran-cu-devanahalli60-server-profile-cu-dell-r640-00
+  topology.kubernetes.io/zone: ran-cu-devanahalli60-dell00
 
 commonAnnotations:  
 #  argocd.argoproj.io/sync-wave: "10"

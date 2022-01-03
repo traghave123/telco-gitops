@@ -4,7 +4,7 @@ kind: Kustomization
 
 commonLabels:
   # Each SITE_ID is a different zone
-  topology.kubernetes.io/zone: ran-cu-devanahalli60-server-profile-cu-dell-r640-00
+  topology.kubernetes.io/zone: ran-cu-devanahalli60-dell00
 
 commonAnnotations:
   argocd.argoproj.io/sync-options: Prune=false
@@ -15,5 +15,5 @@ resources:
   - 00-label-wait-job-devanahalli60-sno-5-pao.yaml
 
   - 00-pao-wait-job-devanahalli60-sno-5.yaml
-  - 01-mcp-ran-cu-devanahalli60-server-profile-cu-dell-r640-00.yaml
-  - 02-pao-ran-cu-devanahalli60-server-profile-cu-dell-r640-00-pao-profile-cu-dell-r640-00.yaml
+  - 01-mcp-ran-cu-devanahalli60-dell00.yaml
+  - 02-pao-ran-cu-devanahalli60-dell00-profile0.yaml
