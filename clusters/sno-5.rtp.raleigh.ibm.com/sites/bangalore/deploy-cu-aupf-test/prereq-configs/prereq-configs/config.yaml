@@ -1,0 +1,6 @@
+{
+    "application-name": "bangalore-aupf_test",
+    "cluster-name": "sno-5.rtp.raleigh.ibm.com
+    "cluster-address": "https://api.sno-5.rtp.raleigh.ibm.com:6443",
+    "path": "clusters/sno-5.rtp.raleigh.ibm.com/sites/bangalore/cu/aupf_test"
+}

@@ -1,0 +1,40 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+ name: cu-prereq-configs
+ namespace: cnf
+spec:
+  syncPolicy: {}
+  generators:
+    - git:
+        repoURL: https://github.com/traghave123/telco-gitops.git
+        revision: master
+        files:
+        - path: "clusters/sno-5.rtp.raleigh.ibm.com/sites/*/deploy-cu-*/prereq-configs/config.json"
+  template:
+    metadata:
+      name: '{{application-name}}'
+      namespace: cnf
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/traghave123/telco-gitops.git
+        targetRevision: master
+        path: '{{path}}'
+      destination:
+        server: '{{cluster-address}}'
+      syncPolicy:
+        automated:
+          prune: false
+          allowEmpty: true  
+          selfHeal: true 
+        retry:
+          backoff:
+            duration: 5s
+            factor: 2
+            maxDuration: 3m
+          limit: -1
+        syncOptions:
+        - Validate=false
+        - CreateNamespace=true        
