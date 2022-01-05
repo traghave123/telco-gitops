@@ -27,5 +27,5 @@ spec:
   registrySources:
     insecureRegistries:
     - mirror-reg-461.fyre.ibm.com:5000
-status:
-  internalRegistryHostname: image-registry.openshift-image-registry.svc:5000
+#status:
+#  internalRegistryHostname: image-registry.openshift-image-registry.svc:5000
