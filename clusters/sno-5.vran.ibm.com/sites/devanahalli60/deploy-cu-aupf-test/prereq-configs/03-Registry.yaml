@@ -1,7 +1,7 @@
 ---
 apiVersion: v1
 data:
-  .dockerconfigjson: e2F1dGhzOiB7bWlycm9yLXJlZy00NjEuZnlyZS5pYm0uY29tOjUwMDA6IHthdXRoOiBpYm11c2VyOmlibXBhc3N3b3JkLCBlbWFpbDogcG1hbGxhbmFAaW4uaWJtLmNvbX19fQ==
+  .dockerconfigjson: eyJhdXRocyI6IHsibWlycm9yLXJlZy00NjEuZnlyZS5pYm0uY29tOjUwMDAiOiB7ImF1dGgiOiAiYVdKdGRYTmxjanBwWW0xd1lYTnpkMjl5WkE9PSIsICJlbWFpbCI6ICJwbWFsbGFuYUBpbi5pYm0uY29tIiwgInBhc3N3b3JkIjogImlibXBhc3N3b3JkIiwgInVzZXIiOiAiaWJtdXNlciJ9fX0=
 kind: Secret
 metadata:
   name: registry-bastion-ps
