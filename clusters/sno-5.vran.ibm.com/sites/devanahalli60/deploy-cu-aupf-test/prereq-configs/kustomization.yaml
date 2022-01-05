@@ -4,7 +4,7 @@ kind: Kustomization
 
 commonLabels:
   # Each SITE_ID is a different zone
-  topology.kubernetes.io/zone: ran-cu-devanahalli60-aupf_test
+  topology.kubernetes.io/zone: ran-cu-devanahalli60-aupf-test
 
 
 resources:
