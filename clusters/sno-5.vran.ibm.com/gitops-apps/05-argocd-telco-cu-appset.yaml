@@ -3,7 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
  name: cu-prereq-configs
- namespace: cnf
+ namespace: sno-5
 spec:
   syncPolicy: {}
   generators:
@@ -15,7 +15,7 @@ spec:
   template:
     metadata:
       name: '{{application-name}}'
-      namespace: cnf
+      namespace: sno-5
     spec:
       project: default
       source:
