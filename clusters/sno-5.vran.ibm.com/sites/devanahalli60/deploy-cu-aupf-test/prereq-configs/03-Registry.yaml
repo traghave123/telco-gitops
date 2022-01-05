@@ -1,7 +1,8 @@
 ---
 apiVersion: v1
 data:
-  .dockerconfigjson: e2F1dGhzOiB7bWlycm9yLXJlZy00NjEuZnlyZS5pYm0uY29tOjUwMDA6IHthdXRoOiBhV0p0ZFhO
+  .dockerconfigjson: | 
+    e2F1dGhzOiB7bWlycm9yLXJlZy00NjEuZnlyZS5pYm0uY29tOjUwMDA6IHthdXRoOiBhV0p0ZFhO
 bGNqcHBZbTF3WVhOemQyOXlaQT09LCBlbWFpbDogcG1hbGxhbmFAaW4uaWJtLmNvbX19fQ==
 kind: Secret
 metadata:
