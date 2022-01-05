@@ -1,3 +1,4 @@
+---
 apiVersion: v1
 data:
   .dockerconfigjson: e2F1dGhzOiB7bWlycm9yLXJlZy00NjEuZnlyZS5pYm0uY29tOjUwMDA6IHthdXRoOiBhV0p0ZFhO
