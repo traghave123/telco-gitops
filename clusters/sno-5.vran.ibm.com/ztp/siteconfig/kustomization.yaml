@@ -1,7 +1,0 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-
-resources:
-    - post-sync.yaml
-    - pre-sync.yaml
-    - sno-sno-5.yaml  
