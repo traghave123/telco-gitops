@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+
+  - argocd-openshift-gitops.yaml
+  - gitops-cluster-rolebinding.yaml
+  - app-project.yaml
+  - git-secret.yaml
