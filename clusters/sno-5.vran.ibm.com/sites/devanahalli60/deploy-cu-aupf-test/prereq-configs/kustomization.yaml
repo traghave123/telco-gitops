@@ -11,4 +11,3 @@ resources:
   - 01-Namespace.yaml
   - 02-ConfigMap.yaml
   - 03-Registry.yaml
-
