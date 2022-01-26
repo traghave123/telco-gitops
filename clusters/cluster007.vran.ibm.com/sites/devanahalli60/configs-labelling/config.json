@@ -1,0 +1,6 @@
+{
+    "application-name": "devanahalli60-labelling",
+    "cluster-name": "cluster007.vran.ibm.com",
+    "cluster-address": "https://api.cluster007.vran.ibm.com:6443",
+    "path": "clusters/cluster007.vran.ibm.com/sites/devanahalli60/configs-labelling"
+}
