@@ -11,7 +11,7 @@ spec:
         repoURL: https://github.com/traghave123/telco-gitops.git
         revision: master
         files:
-        - path: "clusters/mdnhost.cp.fyre.ibm.com/sites/*/*/configs-*/config.json"
+        - path: "clusters/mdnhost.cp.fyre.ibm.com/sites/*/configs-*/config.json"
   template:
     metadata:
       name: '{{application-name}}'
