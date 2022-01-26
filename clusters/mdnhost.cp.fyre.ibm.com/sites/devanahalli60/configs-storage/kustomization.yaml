@@ -12,9 +12,9 @@ commonAnnotations:
 
 
 resources:
-  - 00-label-wait-job-devanahalli60-integrateceph.yaml
+  - 00-label-wait-job-devanahalli60-storage.yaml
 
-  - 00-odf-wait-job-devanahalli60-integrateceph.yaml
+  - 00-odf-wait-job-devanahalli60-storage.yaml
   - 01-secret.yaml
   - 02-storagesystem.yaml
   - 03-storagecluster.yaml
