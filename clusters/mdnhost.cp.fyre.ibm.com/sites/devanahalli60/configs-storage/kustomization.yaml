@@ -15,6 +15,6 @@ resources:
   - 00-label-wait-job-devanahalli60-storage.yaml
 
   - 00-odf-wait-job-devanahalli60-storage.yaml
-  - 01-secret.yaml
-  - 02-storagesystem.yaml
-  - 03-storagecluster.yaml
+  - 01-cluster-logging.yaml
+  - 02-monitoring-config.yaml
+  - 03-oc-registry-pvc.yaml
