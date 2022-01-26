@@ -82,3 +82,12 @@ rules:
       - get
       - list
       - update
+  - apiGroups:
+      - ocs.openshift.io
+    resources:
+      - storageclusters
+      - storagesystems
+    verbs:
+      - get
+      - list
+      - update          
