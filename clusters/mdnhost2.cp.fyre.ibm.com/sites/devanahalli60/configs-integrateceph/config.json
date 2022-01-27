@@ -1,0 +1,6 @@
+{
+    "application-name": "devanahalli60-integrateceph",
+    "cluster-name": "mdnhost2.cp.fyre.ibm.com",
+    "cluster-address": "https://api.mdnhost2.cp.fyre.ibm.com:6443",
+    "path": "clusters/mdnhost2.cp.fyre.ibm.com/sites/devanahalli60/configs-integrateceph"
+}

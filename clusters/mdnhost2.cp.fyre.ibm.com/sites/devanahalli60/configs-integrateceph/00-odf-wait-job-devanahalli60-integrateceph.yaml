@@ -1,0 +1,41 @@
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+#    argocd.argoproj.io/sync-wave: "30"
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+  name: odf-wait-cu-devanahalli60-integrateceph
+  namespace: argocd
+spec:
+  template:
+    spec:
+      containers:
+        - image: registry.redhat.io/openshift4/ose-cli:v4.4
+          command:
+            - /bin/bash
+            - -c
+            - |
+              export HOME=/tmp/mcp
+              echo ""
+              echo -n "Waiting for the odf to ready."
+              sleep $SLEEP
+              until [ $STATUS -eq 0 ]
+              do
+                 oc rollout status deployments odf-operator-controller-manager  -n openshift-storage --timeout 300s
+                 STATUS=$?
+                 echo -n "Waiting for the daemonset to be created."
+                 sleep $SLEEP
+              done              
+              echo "DONE"
+          imagePullPolicy: Always
+          name: odf-wait-job
+          env:
+          - name: SLEEP
+            value: "5"
+      dnsPolicy: ClusterFirst
+      restartPolicy: OnFailure
+      serviceAccount: cli-job-sa
+      serviceAccountName: cli-job-sa
+      terminationGracePeriodSeconds: 30
