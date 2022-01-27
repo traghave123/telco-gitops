@@ -1,0 +1,21 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+commonLabels:
+  telco-gitops/cluster-name: mdnhost1.cp.fyre.ibm.com
+  topology.kubernetes.io/region: mdnhost1.cp.fyre.ibm.com
+  # Each SITE_ID is a different zone
+  #topology.kubernetes.io/zone: sample-zone
+
+commonAnnotations:
+  # Annotations to work around automatically generated resoruces
+  # to avoid ArgoCD reporing out-of-sync
+  argcd.argoproj.io/compare-options: IgnoreExtraneous
+  argocd.argoproj.io/sync-options: Prune=false
+  argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+
+bases:
+  - ../../base/operators/openshift-elasticsearch
+  - ../../base/operators/openshift-logging
+  - ../../base/operators/openshift-data-foundation

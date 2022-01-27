@@ -1,0 +1,6 @@
+{
+    "application-name": "devanahalli60-labelling",
+    "cluster-name": "mdnhost1.cp.fyre.ibm.com",
+    "cluster-address": "https://api.mdnhost1.cp.fyre.ibm.com:6443",
+    "path": "clusters/mdnhost1.cp.fyre.ibm.com/sites/devanahalli60/configs-labelling"
+}
